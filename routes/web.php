@@ -1,10 +1,17 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+
 Route::redirect('/home', '/admin');
 Auth::routes(['register' => false]);
 
-Route::get('/', 'HomeController@index')->name('home');
-Route::get('search', 'HomeController@search')->name('search');
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/clients', [HomeController::class, 'clients'])->name('clients');
+Route::get('search', [HomeController::class, 'search'])->name('search');
+Route::get('contact', [HomeController::class, 'contact'])->name('contact');
+Route::get('about', [HomeController::class, 'about'])->name('about');
+
 Route::resource('jobs', 'JobController')->only(['index', 'show']);
 Route::get('category/{category}', 'CategoryController@show')->name('categories.show');
 Route::get('location/{location}', 'LocationController@show')->name('locations.show');

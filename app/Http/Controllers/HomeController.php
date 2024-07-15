@@ -9,7 +9,11 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function index()
+    public function index(){
+
+        return view('index');
+    }
+    public function clients()
     {
         $searchLocations = Location::pluck('name', 'id');
         $searchCategories = Category::pluck('name', 'id');
@@ -22,7 +26,7 @@ class HomeController extends Controller
             ->take(7)
             ->get();
 
-        return view('index', compact(['searchLocations', 'searchCategories', 'searchByCategory', 'jobs']));
+        return view('jobs', compact(['searchLocations', 'searchCategories', 'searchByCategory', 'jobs']));
     }
 
     public function search(Request $request)
@@ -34,5 +38,16 @@ class HomeController extends Controller
         $banner = 'Search results';
 
         return view('jobs.index', compact(['jobs', 'banner']));
+    }
+
+
+    public function contact(){
+
+        return view('pages.contact');
+    }
+
+    public function about(){
+
+        return view('pages.about');
     }
 }

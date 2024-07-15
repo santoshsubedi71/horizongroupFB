@@ -1,5 +1,5 @@
 @extends('layouts.main')
-
+{{-- 
 @section('banner', 'Job: '.$job->title)
 
 @section('content')
@@ -40,4 +40,4 @@
         </p>
     </div>													
 </div>
-@endsection
+@endsection --}}

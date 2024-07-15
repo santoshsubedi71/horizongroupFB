@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('banner', $banner)
+ @section('banner', $banner)
 
 @section('content')
 <div class="col-lg-8 post-list">

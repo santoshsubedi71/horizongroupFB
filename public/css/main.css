@@ -1883,11 +1883,13 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
   transition: all 0.5s;
   z-index: 997;
+  
 }
 
 #header.header-scrolled {
-  background: rgba(231, 239, 255, 0.8);
+  background: rgba(250,250,250,0.99) !important;
   transition: all 0.5s;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.15)!important;
 }
 
 
@@ -1913,9 +1915,21 @@ h1, h2, h3, h4, h5, h6 {
 
 #header #logo span{
 
-  color: rgb(0, 189, 247);
-
+  color: #fff;
 }
+
+#header.header-scrolled #logo span {
+  color: black;
+}
+
+#header #logo em{
+
+  color: #ed563b;
+}
+
+
+
+
 #header #logo img {
   padding: 0;
   margin: 0;
@@ -2035,12 +2049,21 @@ h1, h2, h3, h4, h5, h6 {
   padding: 6px 10px;
   text-decoration: none;
   display: inline-block;
-  color: #49e4fa;
+  color: #fff;
   font-weight: 400;
   font-size: 12px;
   text-transform: uppercase;
   outline: none;
 }
+
+#header.header-scrolled .nav-menu a {
+  color: black;
+}
+
+#header.header-scrolled .nav-menu a:hover {
+  color: #ed563b;
+}
+
 
 .nav-menu > li {
   margin-left: 10px;
@@ -2066,8 +2089,13 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: none;
 }
 
-.nav-menu ul li:hover > a {
-  color: #49e4fa;
+.nav-menu a:hover{
+  color: #ed563b;
+}
+
+
+.nav-menu li a.active {
+  color: #ed563b !important;
 }
 
 .nav-menu ul ul {
@@ -2230,6 +2258,21 @@ body.mobile-nav-active #mobile-nav-toggle {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 } */
+
+/* Gradient background with blur effect */
+.p1-gradient-bg,
+.banner-area .overlay-bg,
+.sidebar .single-slidebar .cat-list li:hover,
+.callto-action-area,
+.single-price:hover .price-bottom,
+.single-service:hover,
+.submit-right,
+.submit-left,
+.contact-btns,
+.form-area .primary-btn {
+  backdrop-filter: blur(8px); /* Adjust blur radius as needed */
+}
+
 
 .primary-btn {
   background-color: #49e4fa;

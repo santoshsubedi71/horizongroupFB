@@ -23,7 +23,6 @@
         @include('partials.banner')
 
         @yield('home')
-            
         <!-- Start post Area -->
         <section class="post-area section-gap">
             <div class="container">
